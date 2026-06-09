@@ -36,6 +36,8 @@ The simulation space is divided into fixed-size cells. Each ball is assigned to 
 - Distant objects are ignored.
 - Significantly reduces unnecessary comparisons.
 
+<img width="607" height="438" alt="Screenshot 2026-06-09 194653" src="https://github.com/user-attachments/assets/498fea5e-ec99-4217-a3f9-7e81b2e68668" />
+
 For 100 balls:
 
 - **~1,594 collision checks per frame**
