@@ -13,7 +13,7 @@ This project demonstrates collision detection optimization in a 2D Raylib simula
 - Measures the performance improvement achieved through optimization
 
 # Unoptimized Collision Check
-<img width="1201" height="1202" alt="unoptimized drawio" src="https://github.com/user-attachments/assets/f18cc0f6-611d-4dd8-bd8b-2ac17f4990e3" />
+<img width="600.5" height="601" alt="unoptimized drawio" src="https://github.com/user-attachments/assets/f18cc0f6-611d-4dd8-bd8b-2ac17f4990e3" />
 
 The initial implementation uses a brute-force approach where every ball is compared against every other ball.
 
@@ -27,7 +27,7 @@ For 100 balls:
 - **4,950 collision checks per frame**
 
 ## Optimized Collision Check (Uniform Grid)
-<img width="1532" height="1802" alt="optimized drawio" src="https://github.com/user-attachments/assets/f8e0c360-f143-49a0-a2ff-d74682c91097" />
+<img width="766" height="901" alt="optimized drawio" src="https://github.com/user-attachments/assets/f8e0c360-f143-49a0-a2ff-d74682c91097" />
 
 The simulation space is divided into fixed-size cells. Each ball is assigned to a cell based on its position.
 
@@ -41,4 +41,12 @@ For 100 balls:
 - **~1,594 collision checks per frame**
 - **~67.8% reduction**
 
+## Results
+
+| Balls | Method | Checks |
+|---------|---------|---------|
+| 100 | Brute Force | 4950 |
+| 100 | Uniform Grid | 1594 |
+
+Reduction: **~67.8% fewer collision checks**
 
