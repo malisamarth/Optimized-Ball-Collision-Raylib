@@ -22,6 +22,8 @@ The initial implementation uses a brute-force approach where every ball is compa
 - Collision checks grow quadratically as object count increases.
 - Complexity: **O(n²)**
 
+<img width="607" height="442" alt="unoptimized" src="https://github.com/user-attachments/assets/ad3a2736-0780-4b50-ae78-28b7e81c1f78" />
+
 For 100 balls:
 
 - **4,950 collision checks per frame**
