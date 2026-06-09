@@ -11,3 +11,34 @@ This project demonstrates collision detection optimization in a 2D Raylib simula
 - Tracks collision checks per frame
 - Compares brute-force collision detection against a grid-based spatial partitioning approach
 - Measures the performance improvement achieved through optimization
+
+# Unoptimized Collision Check
+<img width="1201" height="1202" alt="unoptimized drawio" src="https://github.com/user-attachments/assets/f18cc0f6-611d-4dd8-bd8b-2ac17f4990e3" />
+
+The initial implementation uses a brute-force approach where every ball is compared against every other ball.
+
+- Two nested loops iterate through all ball pairs.
+- `CheckCollisionCircles()` is executed for each comparison.
+- Collision checks grow quadratically as object count increases.
+- Complexity: **O(n²)**
+
+For 100 balls:
+
+- **4,950 collision checks per frame**
+
+## Optimized Collision Check (Uniform Grid)
+<img width="1532" height="1802" alt="optimized drawio" src="https://github.com/user-attachments/assets/f8e0c360-f143-49a0-a2ff-d74682c91097" />
+
+The simulation space is divided into fixed-size cells. Each ball is assigned to a cell based on its position.
+
+- Collision checks are limited to balls in the same cell.
+- Neighboring cells are also checked to avoid missing edge collisions.
+- Distant objects are ignored.
+- Significantly reduces unnecessary comparisons.
+
+For 100 balls:
+
+- **~1,594 collision checks per frame**
+- **~67.8% reduction**
+
+
